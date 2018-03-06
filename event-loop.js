@@ -8,12 +8,12 @@ setImmediate(()=>{
     console.log('immediate');
 });
 
+new Promise(resolve => {
+    resolve('promise');
+}).then(console.log);
+
 process.nextTick(()=>{
     console.log('nextTick');
 });
-
-new Promise(resolve => {
-    resolve('promise1');
-}).then(console.log);
 
 console.log('start');
